@@ -18,6 +18,10 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include('inspired_world.apps.profiles.urls',
+                         namespace='profiles')),
     path('api/', include('inspired_world.apps.authentication.urls',
                          namespace='authentication')),
+    path('api/', include('inspired_world.apps.writtings.urls',
+                         namespace="writtings")),
 ]

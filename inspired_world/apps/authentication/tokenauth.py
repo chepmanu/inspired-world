@@ -42,8 +42,8 @@ class JWTAuthentication(authentication.BaseAuthentication):
             msg = 'This user has been deactivated.'
             raise exceptions.AuthenticationFailed(msg)
 
-        if not user.is_verified:
-            msg = 'This user has not been verified'
-            raise exceptions.AuthenticationFailed(msg)
+        # if not user.is_verified:
+        #     msg = 'This user has not been verified'
+        #     raise exceptions.AuthenticationFailed(msg)
 
         return (user, token)
